@@ -32,25 +32,22 @@ margin: 0px;
 }
 
 .gallery {
-    --items: 4;
-    --gap: 20px;
-
    display: flex;
    flex-wrap: wrap;
-   gap: var(--gap);
-   margin: 20px;
+    margin: 20px;
 }
 
 .photo-card {
  flex-basis: calc((100% - var(--gap) * (var(--items) - 1)) / var(--items));
  margin-right: 20px;
- width: 350px;
+ 
     
 }
 .photo {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
     
 }
 .info {

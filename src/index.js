@@ -82,8 +82,8 @@ function onLoadMore() {
 }
 
 function markupGallery(images) {
-  const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `<div class="photo-card">
-  <div class="photo-card">
+  const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => 
+  `<div class="photo-card">
   <a href="${largeImageURL}"><img class="photo"  src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
   <div class="info">
     <p class="info_item">
