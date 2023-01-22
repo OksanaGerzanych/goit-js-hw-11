@@ -44,15 +44,17 @@ btnLoadMore.addEventListener('click', onLoadMore);
           `Hooray! We found ${data.totalHits} images.`
         );
         gallerySimpleLightbox.refresh();
-        btnLoadMore.hidden = false;
-//         const { height: cardHeight } = document.
-//           querySelector(".gallery").
-//           firstElementChild.getBoundingClientRect();
+        
+        
+        const { height: cardHeight } = document.
+          querySelector(".gallery").
+          firstElementChild.getBoundingClientRect();
 
-//          window.scrollBy({
-//          top: cardHeight * 2,
-//          behavior: "smooth",
-//  });
+         window.scrollBy({
+         top: cardHeight * 2,
+         behavior: "smooth",
+         });
+        btnLoadMore.hidden = false;
       }
     }).catch(err => console.log(err));
     
