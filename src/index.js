@@ -89,16 +89,16 @@ function markupGallery(images) {
   <a href="${largeImageURL}"><img class="photo"  src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
   <div class="info">
     <p class="info_item">
-      <b>Likes:</b><span class="info_item-api">${likes}</span>
+      <b>Likes</b><span class="info_item-api">${likes}</span>
     </p>
     <p class="info_item">
-      <b>Views:</b><span class="info_item-api">${views}</span>
+      <b>Views</b><span class="info_item-api">${views}</span>
     </p>
     <p class="info_item">
-      <b>Comments:</b><span class="info_item-api">${comments}</span>
+      <b>Comments</b><span class="info_item-api">${comments}</span>
     </p>
     <p class="info_item">
-      <b>Downloads:</b><span class="info_item-api">${downloads}</span>
+      <b>Downloads</b><span class="info_item-api">${downloads}</span>
     </p>
   </div>
 </div>`).join('');
