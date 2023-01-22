@@ -44,17 +44,17 @@ btnLoadMore.addEventListener('click', onLoadMore);
           `Hooray! We found ${data.totalHits} images.`
         );
         gallerySimpleLightbox.refresh();
-        
-        
-        const { height: cardHeight } = document.
-          querySelector(".gallery").
-          firstElementChild.getBoundingClientRect();
-
-         window.scrollBy({
-         top: cardHeight * 2,
-         behavior: "smooth",
-         });
         btnLoadMore.hidden = false;
+        
+        // const { height: cardHeight } = document.
+        //   querySelector(".gallery").
+        //   firstElementChild.getBoundingClientRect();
+
+        //  window.scrollBy({
+        //  top: cardHeight * 2,
+        //  behavior: "smooth",
+        //  });
+        
       }
     }).catch(err => console.log(err));
     
@@ -64,6 +64,7 @@ function onLoadMore() {
   page += 1
   inputValue = input.value.trim();
   gallery.innerHTML = "";
+  
  
 
   pixabayAPI(inputValue, page, perPage).then(data => {
@@ -71,12 +72,11 @@ function onLoadMore() {
     let totalPages = data.totalHits / perPage;
     gallerySimpleLightbox.refresh();
     
+    
     if (page >= totalPages) {
       btnLoadMore.hidden = true;
       Notiflix.Notify.info("We're sorry, but you've reached the end of search results.") 
-      
     }
-    
     //console.log(data)
   })
     .catch(err => console.log(err))
