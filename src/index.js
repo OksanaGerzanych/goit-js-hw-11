@@ -63,7 +63,7 @@ btnLoadMore.addEventListener('click', onLoadMore);
 function onLoadMore() {
   page += 1
   inputValue = input.value.trim();
-  gallery.innerHTML = "";
+ 
   
  
 
